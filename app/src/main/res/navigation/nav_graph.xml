@@ -13,6 +13,9 @@
         <action
             android:id="@+id/actionGoToFormLocationFragment"
             app:destination="@id/formLocationFragment" />
+        <action
+            android:id="@+id/actionGoToFormCharactersFragment"
+            app:destination="@id/formCharactersFragment" />
     </fragment>
     <fragment
         android:id="@+id/formLocationFragment"
@@ -35,4 +38,9 @@
             android:name="longitude"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/formCharactersFragment"
+        android:name="com.gogaedd.applicationmultitestcaranty.characters_in_string.ui.FormCharactersFragment"
+        tools:layout="@layout/fragment_form_characters"
+        android:label="FormCharactersFragment" />
 </navigation>

@@ -24,6 +24,10 @@ class HomeFragment : Fragment() {
             val action= HomeFragmentDirections.actionGoToFormLocationFragment()
             findNavController().navigate(action)
         }
+        btnGoCountLettersActm.setOnClickListener {
+            val action= HomeFragmentDirections.actionGoToFormCharactersFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

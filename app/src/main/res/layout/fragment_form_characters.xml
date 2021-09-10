@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data><variable
+        name="viewmodeL"
+        type="com.gogaedd.applicationmultitestcaranty.characters_in_string.viewmodel.CharactersInTextViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".characters_in_string.ui.FormCharactersFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTextToCountFgmntfc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/etTextToCountFgmntfc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cadena a validar"
+                android:inputType="text" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@{viewmodeL.lvdLetters}"
+            app:layout_constraintTop_toBottomOf="@id/tilTextToCountFgmntfc"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
