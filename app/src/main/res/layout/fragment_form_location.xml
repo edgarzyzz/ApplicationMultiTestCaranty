@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         tools:context=".weather.ui.FormLocationFragment">
 
         <ImageView
@@ -66,7 +67,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:text="Cancel"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +78,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="10dp"
             android:text="Accpet"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tilLongitudeFgmntfl" />

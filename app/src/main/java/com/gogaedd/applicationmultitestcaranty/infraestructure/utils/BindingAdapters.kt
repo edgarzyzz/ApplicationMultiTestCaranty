@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.gogaedd.applicationmultitestcaranty.R
+import com.gogaedd.applicationmultitestcaranty.weather.Utils
 import com.gogaedd.applicationmultitestcaranty.weather.adapter.WeatherHourAdapter
 import com.gogaedd.applicationmultitestcaranty.weather.model.SummaryWeather
 import com.gogaedd.applicationmultitestcaranty.weather.model.Weather
@@ -62,5 +63,35 @@ object BindingAdapters {
         }
     }
 
+    @JvmStatic
+    @BindingAdapter("paserDateTHour")
+    fun paserDateTHour(textview: TextView, date :String){
+        textview.text= Utils.dateToHours(date.toLong())
+
+    }
+
+
+    @JvmStatic
+    @BindingAdapter("kelvinToCelsius")
+    fun kelvinToCelsius(textView: TextView, kelvin:String){
+        val CONST_KELVIN = 273.15
+        textView.text = try {
+            val currentKelvin = kelvin.toDouble()
+             val temp=currentKelvin-CONST_KELVIN
+            var tempString = temp.toString()
+
+            if (tempString.length>=5){
+                tempString = tempString.substring(0, 5)
+            }
+            "$tempString °C"
+
+
+
+
+        } catch (e: Exception) {
+            "$kelvin °k"
+        }
+
+    }
 
 }
