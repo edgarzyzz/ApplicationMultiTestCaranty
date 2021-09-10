@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="weather"
+            type="com.gogaedd.applicationmultitestcaranty.weather.model.Weather" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgvCovetItmw"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="24dp"
+                drawImageWeather="@{weather.summaryWeather}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDateItmw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{weather.dt.toString()}"
+                app:layout_constraintTop_toBottomOf="@id/imgvCovetItmw" />
+
+            <TextView
+                android:id="@+id/tvTemperaureItmw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{weather.temp.toString()}"
+                app:layout_constraintTop_toBottomOf="@id/tvDateItmw" />
+
+            <TextView
+                android:id="@+id/iddescDetailItmw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                descDetail="@{weather.summaryWeather}"
+                app:layout_constraintTop_toBottomOf="@id/tvTemperaureItmw" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

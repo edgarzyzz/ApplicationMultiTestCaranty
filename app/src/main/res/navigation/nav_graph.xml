@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gogaedd.applicationmultitestcaranty.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/actionGoToFormLocationFragment"
+            app:destination="@id/formLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formLocationFragment"
+        android:name="com.gogaedd.applicationmultitestcaranty.weather.ui.FormLocationFragment"
+        android:label="FormLocationFragment"
+        tools:layout="@layout/fragment_form_location">
+        <action
+            android:id="@+id/actionGoToWeatherResultFragment"
+            app:destination="@id/weatherResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherResultFragment"
+        android:name="com.gogaedd.applicationmultitestcaranty.weather.ui.WeatherResultFragment"
+        android:label="WeatherResultFragment"
+        tools:layout="@layout/fragment_weather_result">
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+    </fragment>
+</navigation>

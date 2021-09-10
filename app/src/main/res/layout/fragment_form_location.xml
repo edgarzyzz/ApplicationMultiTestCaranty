@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".weather.ui.FormLocationFragment">
+
+        <ImageView
+            android:id="@+id/imgvCoverFgmntfl"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLatFgmntfl"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/imgvCoverFgmntfl">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLatFgmntfl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/weather_form_lat"
+                android:inputType="numberDecimal"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:text="19.511036" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLongitudeFgmntfl"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/tilLatFgmntfl">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLonFgmntfl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/weather_form_longitude"
+                android:inputType="numberDecimal"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:text="-99.150506" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilLongitudeFgmntfl" />
+
+        <Button
+            android:id="@+id/btnAcceptFgmntl"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="Accpet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilLongitudeFgmntfl" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
