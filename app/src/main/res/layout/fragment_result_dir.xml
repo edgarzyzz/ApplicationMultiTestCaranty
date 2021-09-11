@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gogaedd.applicationmultitestcaranty.dir_module.viewmodel.DirViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".dir_module.ui.ResultDirFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvFiles"
+                    visibilityBystateMessage="@{viewModel.lvdTextToShow}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{viewModel.lvdTextToShow}"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvMessgaError"
+                    visibilityBystateMessage="@{viewModel.lvdMEssageError}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{viewModel.lvdMEssageError}"
+                    android:textColor="@android:color/black" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

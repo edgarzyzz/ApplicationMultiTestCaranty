@@ -1,5 +1,6 @@
 package com.gogaedd.applicationmultitestcaranty.infraestructure.utils
 
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -92,6 +93,17 @@ object BindingAdapters {
             "$kelvin °k"
         }
 
+    }
+
+
+    @JvmStatic
+    @BindingAdapter("visibilityBystateMessage")
+    fun visibilityBystateMessage(view: View, message: String){
+        view.visibility =if (message.isNullOrEmpty()){
+            View.GONE
+        }else{
+            View.VISIBLE
+        }
     }
 
 }

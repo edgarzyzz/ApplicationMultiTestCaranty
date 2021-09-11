@@ -16,6 +16,9 @@
         <action
             android:id="@+id/actionGoToFormCharactersFragment"
             app:destination="@id/formCharactersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formDirFragment"
+            app:destination="@id/formDirFragment" />
     </fragment>
     <fragment
         android:id="@+id/formLocationFragment"
@@ -43,4 +46,22 @@
         android:name="com.gogaedd.applicationmultitestcaranty.characters_in_string.ui.FormCharactersFragment"
         tools:layout="@layout/fragment_form_characters"
         android:label="FormCharactersFragment" />
+    <fragment
+        android:id="@+id/formDirFragment"
+        android:name="com.gogaedd.applicationmultitestcaranty.dir_module.ui.FormDirFragment"
+        android:label="fragment_form_dir"
+        tools:layout="@layout/fragment_form_dir" >
+        <action
+            android:id="@+id/action_formDirFragment_to_resultDirFragment"
+            app:destination="@id/resultDirFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultDirFragment"
+        android:name="com.gogaedd.applicationmultitestcaranty.dir_module.ui.ResultDirFragment"
+        android:label="ResultDirFragment"
+        tools:layout="@layout/fragment_result_dir">
+        <argument
+            android:name="path"
+            app:argType="string" />
+    </fragment>
 </navigation>

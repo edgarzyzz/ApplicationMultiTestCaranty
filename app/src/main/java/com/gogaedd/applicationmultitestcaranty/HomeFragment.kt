@@ -28,6 +28,11 @@ class HomeFragment : Fragment() {
             val action= HomeFragmentDirections.actionGoToFormCharactersFragment()
             findNavController().navigate(action)
         }
+        btnGoPathDirActm.setOnClickListener{
+            val action= HomeFragmentDirections.actionHomeFragmentToFormDirFragment()
+            findNavController().navigate(action)
+        }
+
     }
 
 }
